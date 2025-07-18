@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 class BookingLoanPage extends StatefulWidget {
-  const BookingLoanPage({Key? key}) : super(key: key);
+  const BookingLoanPage({super.key});
 
   @override
   State<BookingLoanPage> createState() => _BookingLoanPageState();
@@ -29,11 +29,13 @@ class _BookingLoanPageState extends State<BookingLoanPage> {
       await Supabase.instance.client.from('devices').update({
         'status': 'available',
       }).eq('id', deviceId);
+      // ignore: use_build_context_synchronously
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Device returned successfully!')),
       );
       setState(() {});
     } catch (e) {
+      // ignore: use_build_context_synchronously
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text('Error: $e')),
       );

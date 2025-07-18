@@ -4,7 +4,7 @@ import '../bookings/booking_form.dart';
 
 class DeviceDescPage extends StatefulWidget {
   final int deviceId;
-  const DeviceDescPage({Key? key, required this.deviceId}) : super(key: key);
+  const DeviceDescPage({super.key, required this.deviceId});
 
   @override
   State<DeviceDescPage> createState() => _DeviceDescPageState();

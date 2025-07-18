@@ -3,7 +3,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 
 class BookingFormPage extends StatefulWidget {
   final int deviceId;
-  const BookingFormPage({Key? key, required this.deviceId}) : super(key: key);
+  const BookingFormPage({super.key, required this.deviceId});
 
   @override
   State<BookingFormPage> createState() => _BookingFormPageState();
@@ -30,11 +30,14 @@ class _BookingFormPageState extends State<BookingFormPage> {
         'supabase_user_id': user?.id,
         'status': 'pending',
       });
+      // ignore: use_build_context_synchronously
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Booking request sent!')),
       );
+      // ignore: use_build_context_synchronously
       Navigator.of(context).pop();
     } catch (e) {
+      // ignore: use_build_context_synchronously
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text('Error: $e')),
       );

@@ -4,7 +4,7 @@ import '../bookings/booking_loan.dart';
 import '../profile_page.dart';
 
 class DevicePage extends StatefulWidget {
-  const DevicePage({Key? key}) : super(key: key);
+  const DevicePage({super.key});
 
   @override
   State<DevicePage> createState() => _DevicePageState();
