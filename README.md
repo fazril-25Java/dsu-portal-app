@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-# flutter_application_1
+# DSU PORTAL APP
 
 A new Flutter project.
 
